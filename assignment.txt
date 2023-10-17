@@ -1,0 +1,121 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int choice;
+        String answer;
+        System.out.println ("**********************************************");
+        System.out.println ("welcome to Amina's little program menu       *");
+        System.out.println ("Enter a number between 1-5 to stop enter 0   *");
+        System.out.println ("1. Calculator                                *");
+        System.out.println ("2.Comparison                                 *");
+        System.out.println ("3. iteration program                         *");
+        System.out.println ("4.Method                                     *");
+        System.out.println ("5.simple class person                        *");
+        System.out.println ("**********************************************");
+        Scanner in = new Scanner (System.in);
+        boolean shouldContinue = true;
+        while (shouldContinue) {
+            System.out.println ("Enter the number");
+            choice = in.nextInt ();
+            switch (choice) {
+                case 1:
+                    Calculator ();
+                    break;
+                case 2:
+                    RelationalLogicalOperators ();
+                    break;
+                case 3:
+                    Iteration ();
+                case 4:
+                    method (9, 2);
+                    break;
+                case 5:
+                    person();
+                    break;
+                case 0:
+                    shouldContinue = false;
+                    break;
+                default:
+                    System.out.println (" please enter the right number");
+            }
+        }
+    }
+
+    private static void person() {
+
+        String name="Amina";
+        int age=20;
+        String school="Wolkite";
+        String nationality="Ethiopian";
+        System.out.println ("My name is "+name);
+        System.out.println ("I am  " +age+ " old");
+        System.out.println ("I learn in  " +school);
+        System.out.println ("I am " +nationality);
+
+
+    }
+
+
+    public static void Calculator() {
+        //arithmetic operators
+        int number1 = 12;
+        float number2 = 24;
+        System.out.println ("the sum of 24 and 12 is " + (24 + 12));
+        System.out.println ("The difference between 24 and 12 is  " + (24 - 12));
+        System.out.println ("the product is " + 24 * 12);
+        System.out.println ("the quotient is " + 24 / 12);
+
+    }
+    public static int method(int num1, int num2) {//methode that has a parameter and return type
+        int module = num1 % num2;
+        System.out.println ("the reminder is " + module);
+        return module;
+
+
+    }
+
+    public static void RelationalLogicalOperators() {
+        int x = 5;
+        int y = 10;
+        int z = 5;
+
+        // Relational Operators
+        boolean result1 = x < y;
+        boolean result2 = x > y;
+        boolean result3 = x == z;
+
+        System.out.println ("Relational Operator Results:");
+        System.out.println ("x < y is equals to " + result1);
+        System.out.println ("x > y is equals to " + result2);
+        System.out.println ("x == z is equals to  " + result3);
+
+        // Logical Operators
+        boolean expression1 = x < y && y > z;
+        boolean expression2 = x < y || y > z;
+        boolean expression3 = !(x < y);
+
+        System.out.println ("Logical Operator Results:");
+        System.out.println ("x < y && y > z is equals to " + expression1);
+        System.out.println ("x < y || y > z is equals to " + expression2);
+        System.out.println ("!(x < y) is equals to " + expression3);
+    }
+
+    public static void Iteration() {//using loop for to implement repetitive task
+        for (int i = 2; i <= 10; i++) {
+            if (i % 2 == 0)
+                System.out.println (i);
+        }
+        int i = 0;
+        while (i < 5) {
+            System.out.println ("the numbers are " + i);
+            i++;
+        }
+    }
+    }
+
+
+
+
+
+
+
